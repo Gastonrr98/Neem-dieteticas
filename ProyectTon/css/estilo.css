@@ -1,0 +1,322 @@
+/*--------------------------------Global--------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+ul{
+    list-style: none;
+}
+.activo{
+    font-size: 25px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+body , html {
+    overflow-x: hidden;
+}
+section{
+    width: 80%;
+    margin: auto;
+}
+.titulo h1{
+    height: 20%;
+    margin-top: 200px;
+    
+}
+.contenido_Pagina{
+    margin: 50px;
+}
+footer{
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background-color: rgb(57, 43, 75)
+}
+
+.footer_titulo{
+    color: aliceblue;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/*--------------------------------pag prin---------------------------*/
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../imagenes/neem.jpg');
+    background-position: bottom ; 
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+.contenido-header{
+    margin-top: 50px;
+    color: aquamarine;
+    text-align: center;
+}
+
+.contenido-header h2{
+    font-size: 4vmin; /*texto responsive*/ 
+    display: flex;
+    justify-content: center;
+    
+}
+
+.linea{
+    width: 150px;
+    height: 4px;
+    background-color: brown;
+    margin: 10px auto;/*centrar linea*/
+    border-radius: 5px;
+}
+
+.contenido-header h1{
+    font-size: 6vmin;
+    padding: 20px;
+}
+
+.contenido-header a{
+    padding: 8px 15px;
+    background-color: blueviolet;
+    border-radius: 30px;
+}
+
+/*-------------------------------Navbar-------------------------------*/
+.navbar{
+    width: 20%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(57, 43, 75);
+}
+.links-nav{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-izq{
+    display: flex;
+}
+
+.links-nav li{
+    margin: 0 30px;
+}
+.logo{
+    width: 100px;
+}
+/*--------------------------------Productos------------------*/
+.productos h1{
+    height: 20%;
+    margin-top: 200px;
+    
+}
+
+.titulo{
+    text-align: center;
+    font-size: 4vmin;
+}
+.row_prod{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.columnas_prod{
+    margin: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.row_prod .columnas_prod img{
+    width: 500px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.productos .row_prod{
+    margin-top: 50px;
+}
+.division{
+    margin-top: 20px;
+}
+.mas{
+   background-color: rgb(122, 39, 170);
+   padding: 7px 15px;
+   border-radius: 15px;
+}
+h4{
+    font-size: 3vmin;
+    color: #302e2e;
+    margin: 20px auto;
+}
+p{
+    color: #666262;
+    padding: 0px;
+}
+body{
+    background-color: rgb(174, 243, 184);
+}
+
+/*-----------------------------------Nosotras--------------------------*/
+
+.row_nos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    border-style: solid;
+}
+
+.columnas_nos{
+    margin: 30px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.columnas_nos img{
+    float: right;
+    width: 500px;
+    padding: 20px;
+}
+
+
+.productos .row_nos{
+    margin-top: 50px;
+}
+.division{
+    margin-top: 20px;
+}
+
+/*----------------------Sabias que----------------------------*/
+.grid {
+    display: grid;
+    grid-template-columns:400px 400px 400px;
+    justify-content: space-evenly;
+    width: 100%;
+
+    
+    
+} 
+.grid .columnas_sab {
+    border-style: solid;
+    border-radius:25px;
+
+}
+
+.row_sab{
+    
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.columnas_sab img{
+    width: 280px;
+    padding: 20px;
+}
+
+
+.columnas_sab{
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+}
+
+
+.columnas_sab h4{
+    font-size: 5vmin;
+}
+
+.productos .row_sab{
+    margin-top: 50px;
+}
+.division{
+    margin-top: 20px;
+}
+
+
+
+/*Celular*/
+
+@media only screen and (max-width: 850px){
+   
+    .navbar{
+        width: 20%;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: rgb(57, 43, 75);
+    }
+    
+    .links-nav{
+        flex-direction:column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #666262;
+        margin-top: -900px;/*que desaparezca el menu hamburguesa*/
+    }
+
+    .links-nav li{
+        margin: 30px auto;
+    }
+    
+    .grid {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 100px 100px 100px;
+       
+        justify-content: center;
+       
+        
+    } 
+    .logo {
+        width: 0px;
+    }
+    .columnas_sab h4{
+    font-size: 3vmin;
+
+    
+}
+    .columnas_sab p {
+        font-size: 10px;
+       
+    }
+    
+    .grid .columnas_sab {
+        border-style: solid;
+        border-radius:25px;
+        width: 300px;
+        margin-left: -20px;
+        
+    }
+
+    
+.columnas_sab{
+    width: 400px;
+    height: 450px;
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+    
+}
+}
